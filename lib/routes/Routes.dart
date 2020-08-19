@@ -7,6 +7,7 @@ import '../pages/courses/story.dart';
 import '../pages/products/appbardemo.dart';
 import '../pages/products/tabbarcontroller.dart';
 import '../pages/products//httpdemo.dart';
+import '../pages/products/diodemo.dart';
 
 final Map routes = {
   '/': (context, {arguments}) => Tabs(
@@ -20,6 +21,7 @@ final Map routes = {
   '/tabcontroller': (context, {arguments}) =>
       TabbarControllerPage(arguments: arguments),
   '/http': (context, {arguments}) => HttpDemoPage(arguments: arguments),
+  '/dio': (context, {arguments}) => DioDemoPage(arguments: arguments),
 };
 
 var onGenerateRoute = (RouteSettings settings) {

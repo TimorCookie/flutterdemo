@@ -65,7 +65,13 @@ class HomeTab extends StatelessWidget {
                     onPressed: () => {Navigator.pushNamed(context, '/http')},
                     color: Theme.of(context).accentColor,
                     textTheme: ButtonTextTheme.primary,
-                  )
+                  ),
+                  RaisedButton(
+                    child: Text('dio'),
+                    onPressed: () => {Navigator.pushNamed(context, '/dio')},
+                    color: Theme.of(context).accentColor,
+                    textTheme: ButtonTextTheme.primary,
+                  ),
                 ],
               ),
               ListView(
