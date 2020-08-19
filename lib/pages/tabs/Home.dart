@@ -59,6 +59,12 @@ class HomeTab extends StatelessWidget {
                         {Navigator.pushNamed(context, '/tabcontroller')},
                     color: Theme.of(context).accentColor,
                     textTheme: ButtonTextTheme.primary,
+                  ),
+                  RaisedButton(
+                    child: Text('http'),
+                    onPressed: () => {Navigator.pushNamed(context, '/http')},
+                    color: Theme.of(context).accentColor,
+                    textTheme: ButtonTextTheme.primary,
                   )
                 ],
               ),

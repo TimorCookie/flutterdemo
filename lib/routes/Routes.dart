@@ -6,6 +6,7 @@ import '../pages/user/create.dart';
 import '../pages/courses/story.dart';
 import '../pages/products/appbardemo.dart';
 import '../pages/products/tabbarcontroller.dart';
+import '../pages/products//httpdemo.dart';
 
 final Map routes = {
   '/': (context, {arguments}) => Tabs(
@@ -17,7 +18,8 @@ final Map routes = {
   '/story': (context, {arguments}) => StoryPage(arguments: arguments),
   '/appbar': (context, {arguments}) => AppBarDemo(arguments: arguments),
   '/tabcontroller': (context, {arguments}) =>
-      TabbarControllerPage(arguments: arguments)
+      TabbarControllerPage(arguments: arguments),
+  '/http': (context, {arguments}) => HttpDemoPage(arguments: arguments),
 };
 
 var onGenerateRoute = (RouteSettings settings) {
