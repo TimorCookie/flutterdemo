@@ -12,8 +12,9 @@ class AppBarDemo extends StatelessWidget {
               centerTitle: true,
               title: Text('appbar demo'),
               leading: IconButton(
-                  icon: Icon(Icons.menu),
-                  onPressed: () => {print('this is menu widget')}),
+                  icon: Icon(Icons.home),
+                  onPressed: () =>
+                      {Navigator.of(context).pushReplacementNamed('/')}),
               actions: <Widget>[
                 IconButton(
                     icon: Icon(Icons.search),
@@ -22,12 +23,18 @@ class AppBarDemo extends StatelessWidget {
                     icon: Icon(Icons.settings),
                     onPressed: () => {print('this is settings widget')}),
               ],
-              bottom: TabBar(tabs: <Widget>[
-                Tab(text: "儿歌"),
-                Tab(text: '绘本'),
-                Tab(text: '口语'),
-                Tab(text: '动画')
-              ]),
+              bottom: TabBar(
+                indicatorColor: Colors.red,
+                labelColor: Colors.red,
+                unselectedLabelColor: Colors.yellow,
+                indicatorSize: TabBarIndicatorSize.label,
+                tabs: <Widget>[
+                  Tab(text: "儿歌"),
+                  Tab(text: '绘本'),
+                  Tab(text: '口语'),
+                  Tab(text: '动画')
+                ],
+              ),
             ),
             body: TabBarView(children: <Widget>[
               ListView(
