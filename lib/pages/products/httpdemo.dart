@@ -11,23 +11,28 @@ class HttpDemoPage extends StatefulWidget {
 
 class _HttpDemoPageState extends State<HttpDemoPage> {
   List jokes = [];
+  String postData = '';
   _getJoke() async {
     const url = 'https://api.apiopen.top/getJoke?page=3&count=2&type=video';
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
       var jsonRes = convert.jsonDecode(response.body);
-      print(jsonRes["result"]);
-      print(jsonRes["result"].length);
       setState(() {
         this.jokes = jsonRes["result"];
       });
     }
-    // if (response.statusCode == 200) {
-    //   var jsonRes = convert.jsonDecode(response.body);
-    //   var itemCount = jsonRes['totalItems'];
-    //   print('Number of books about http: $itemCount.');
-    // }
+  }
+
+  _getSignupCode() async {
+    const url = 'https://dev.jiliguala.com/api/promoter/verificode';
+    final response =
+        await http.post(url, body: {'mobile': '17621251706', 'mode': 'signup'});
+    print(response.body);
+    var jsonRes = convert.jsonDecode(response.body);
+    setState(() {
+      this.postData = jsonRes['msg'];
+    });
   }
 
   @override
@@ -44,11 +49,16 @@ class _HttpDemoPageState extends State<HttpDemoPage> {
             ),
             RaisedButton(
               child: Text('HTTP_POST'),
-              onPressed: () => print('HTTP_POST'),
+              onPressed: () => _getSignupCode(),
             ),
             Container(
-              child: this.jokes.length > 0 ? Text("有数据了") : Text('请先加载数据...'),
+              child: this.jokes.length > 0
+                  ? Text('${this.jokes}')
+                  : Text('请先加载数据...'),
             ),
+            Container(
+              child: Text('http_post获取的数据：${this.postData}'),
+            )
           ],
         ));
   }
