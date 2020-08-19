@@ -48,8 +48,15 @@ class HomeTab extends StatelessWidget {
                     title: Text('种子路线学习计划'),
                   ),
                   RaisedButton(
-                    child: Text('自定义appbar'),
+                    child: Text('appbar'),
                     onPressed: () => {Navigator.pushNamed(context, '/appbar')},
+                    color: Theme.of(context).accentColor,
+                    textTheme: ButtonTextTheme.primary,
+                  ),
+                  RaisedButton(
+                    child: Text('tabcontroller'),
+                    onPressed: () =>
+                        {Navigator.pushNamed(context, '/tabcontroller')},
                     color: Theme.of(context).accentColor,
                     textTheme: ButtonTextTheme.primary,
                   )
