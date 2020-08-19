@@ -6,7 +6,12 @@ class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Home Tab'),
+      child: RaisedButton(
+        child: Text('appbardemo'),
+        onPressed: () => {Navigator.pushNamed(context, '/appbar')},
+        color: Theme.of(context).accentColor,
+        textTheme: ButtonTextTheme.primary,
+      ),
     );
   }
 }

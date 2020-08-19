@@ -4,6 +4,7 @@ import '../pages/user/login.dart';
 import '../pages/user/register.dart';
 import '../pages/user/create.dart';
 import '../pages/courses/story.dart';
+import '../pages/products/appbardemo.dart';
 
 final Map routes = {
   '/': (context, {arguments}) => Tabs(
@@ -13,6 +14,7 @@ final Map routes = {
   '/register': (context, {arguments}) => RegisterPage(arguments: arguments),
   '/create': (context, {arguments}) => CreatePage(arguments: arguments),
   '/story': (context, {arguments}) => StoryPage(arguments: arguments),
+  '/appbar': (context, {arguments}) => AppBarDemo(arguments: arguments)
 };
 
 var onGenerateRoute = (RouteSettings settings) {
