@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './pages/Tabs.dart';
-import './routes/Routes.dart';
+import 'pages/tabs.dart';
+import 'routes/routes.dart';
 
 void main(List<String> args) {
   runApp(MyApp());

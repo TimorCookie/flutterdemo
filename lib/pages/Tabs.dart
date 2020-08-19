@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './tabs/Home.dart';
-import './tabs/Category.dart';
-import './tabs/Setting.dart';
+import 'tabs/Home.dart';
+import 'tabs/category.dart';
+import 'tabs/Setting.dart';
 
 class Tabs extends StatefulWidget {
   final tabIndex;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../pages//Tabs.dart';
+import '../pages/tabs.dart';
 import '../pages/user/login.dart';
 import '../pages/user/register.dart';
 import '../pages/user/create.dart';
