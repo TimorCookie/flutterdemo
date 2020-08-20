@@ -45,6 +45,7 @@ class _DioDemoPageState extends State<DioDemoPage> {
           this._jokelist.length <= 0
               ? Text('加载中...')
               : ListView(
+                  shrinkWrap: true,
                   children: this._jokelist.map((value) {
                     return ListTile(
                       title: Text(value['text']),
