@@ -25,7 +25,15 @@ class _DioDemoPageState extends State<DioDemoPage> {
     });
   }
 
-  _dioPost() {}
+  _dioPost() async {
+    Dio dio = new Dio();
+    dio.options.headers = {"version": 1};
+    final response = await dio.post(
+        'https://dev.jiliguala.com/api/promoter/verificode',
+        data: {'mobile': '17621251706', 'mode': 'signup'});
+    print(response);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
